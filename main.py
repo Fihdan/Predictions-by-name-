@@ -31,12 +31,11 @@ def step(message):
     global data
     with open("data.json", encoding="utf-8") as file:
         data = json.load(file)
-    with open("data.json", "w", encoding="utf-8"):
-        data = dict()
+    with open("data.json", "w", encoding="utf-8") as file:
         if message.text == "Адрес верный":
             if not message.chat.id in data:
                 data[message.chat.id] = {
-                    f"{datetime.datetime}" : {
+                    f"{datetime.datetime.strftime('%d.%m.%Y %I:%M:%s')}" : {
                         "first_name" : f"{message.from_user.first_name}",
                         "last_name" : f"{message.from_user.last_name}",
                         "username" : f"{message.from_user.username}",
