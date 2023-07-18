@@ -1,4 +1,4 @@
-import requests
+"""import requests
 
 url = "https://deezerdevs-deezer.p.rapidapi.com/search"
 
@@ -11,4 +11,4 @@ headers = {
 
 response = requests.get(url, headers=headers, params=querystring)
 
-print(response.json())
+print(response.json())"""
